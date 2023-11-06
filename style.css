@@ -1,51 +1,48 @@
-const userName = '';
-
-userName ? console.log(`Hello ${userName}!`) : console.log('Hello!');
-
-const userQuestion = 'No ceu tem pão?';
-
-console.log(`O usuário perguntou: ${userQuestion}`);
-
-const randomNumber = Math.floor(Math.random() * 8);
-let eightBall = '';
-switch (randomNumber) {
-  case 0:
-    eightBall = 'It is certain';
-    break;
-  case 1:
-    eightBall = 'It is decidedly so';
-    break;
-  case 2:
-    eightBall = 'Reply hazy try again';
-    break;
-  case 3:
-    eightBall = 'Cannot predict now';
-    break;
-  case 4:
-    eightBall = 'Do not count on it';
-    break;
-  case 5:
-    eightBall = 'My sources say no';
-    break;
-  case 6:
-    eightBall = 'Outlook not so good';
-    break;
-  case 7:
-    eightBall = 'Signs point to yes';
-    break;
-  default:
-    eightBall = 'Não foi possível determinar';
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
 
-const shakeButton = document.getElementById('shakeButton');
-const userQuestionInput = document.getElementById('userQuestion');
-const answerDiv = document.getElementById('answer');
+h1 {
+  font-size: 2em;
+  color: #333;
+}
 
-shakeButton.addEventListener('click', function () {
-  if (userQuestionInput.value !== '') {
-    answerDiv.textContent = eightBall;
-  } else {
-    answerDiv.textContent = 'Faça uma pergunta primeiro!';
-  }
-});
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.answer {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 50px;
+}
